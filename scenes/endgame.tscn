@@ -6,10 +6,10 @@
 script = ExtResource("1_dugu8")
 
 [node name="Button" type="Button" parent="." unique_id=508095904]
-offset_left = 536.0
-offset_top = 304.0
-offset_right = 616.0
-offset_bottom = 335.0
+offset_left = 448.0
+offset_top = 320.0
+offset_right = 704.0
+offset_bottom = 384.0
 text = "replay...?"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
