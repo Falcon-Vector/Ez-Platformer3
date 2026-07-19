@@ -4,7 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://c82jeyhke3qsg" path="res://prefabs/player.tscn" id="1_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://dyaxxf4sjyasx" path="res://prefabs/spike.tscn" id="3_4nkto"]
 [ext_resource type="PackedScene" uid="uid://dqlajmncfyl72" path="res://prefabs/portal.tscn" id="3_5xbjy"]
+[ext_resource type="FontFile" uid="uid://dp786jcq5b2ag" path="res://assetz/PressStart2P-Regular.ttf" id="3_pa8r4"]
 [ext_resource type="Texture2D" uid="uid://ctehteldmhdup" path="res://assetz/spritesheet-tiles-default.png" id="4_4nkto"]
+[ext_resource type="PackedScene" uid="uid://dxmx4wn0cyqx4" path="res://scenes/coin.tscn" id="6_fcfvj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fcfvj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fcfvj"]
 texture = ExtResource("4_4nkto")
@@ -376,14 +380,59 @@ centered = false
 offset = Vector2(0, -124.39)
 
 [node name="player" parent="." unique_id=764091025 instance=ExtResource("1_5xbjy")]
-position = Vector2(568, 200)
+position = Vector2(576, 328)
+
+[node name="Label" type="Label" parent="player" unique_id=874171294]
+modulate = Color(0, 0, 0, 1)
+offset_left = -568.0
+offset_top = -304.0
+offset_right = -496.0
+offset_bottom = -271.0
+scale = Vector2(2.5, 2.5)
+theme_override_fonts/font = ExtResource("3_pa8r4")
+theme_override_font_sizes/font_size = 2
+text = "coins - 0"
+label_settings = SubResource("LabelSettings_fcfvj")
 
 [node name="spike" parent="." unique_id=644990931 instance=ExtResource("3_4nkto")]
-position = Vector2(856, 576)
+position = Vector2(1376, 704)
+
+[node name="spike6" parent="." unique_id=663240142 instance=ExtResource("3_4nkto")]
+position = Vector2(2912, 512)
+
+[node name="spike5" parent="." unique_id=24000071 instance=ExtResource("3_4nkto")]
+position = Vector2(2336, 632)
+
+[node name="spike7" parent="." unique_id=498678079 instance=ExtResource("3_4nkto")]
+position = Vector2(3552, 640)
+
+[node name="spike10" parent="." unique_id=1253413 instance=ExtResource("3_4nkto")]
+position = Vector2(3424, 848)
+
+[node name="spike9" parent="." unique_id=457857459 instance=ExtResource("3_4nkto")]
+position = Vector2(3592, 840)
+
+[node name="spike8" parent="." unique_id=605818767 instance=ExtResource("3_4nkto")]
+position = Vector2(4192, 448)
+
+[node name="spike4" parent="." unique_id=676554182 instance=ExtResource("3_4nkto")]
+position = Vector2(1824, 648)
+
+[node name="spike3" parent="." unique_id=1002409198 instance=ExtResource("3_4nkto")]
+position = Vector2(736, 576)
+
+[node name="spike2" parent="." unique_id=1424761144 instance=ExtResource("3_4nkto")]
+position = Vector2(216, 576)
 
 [node name="portal" parent="." unique_id=45335202 instance=ExtResource("3_5xbjy")]
-position = Vector2(1880, 520)
+position = Vector2(1032, 56)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1067952206]
-tile_map_data = PackedByteArray("AAAAAAkAAAAAAAAAAAABAAkAAAAAAAAAAAACAAkAAAAAAAAAAAADAAkAAAAAAAAAAAAEAAkAAAAAAAAAAAAFAAkAAAAAAAAAAAAGAAkAAAAAAAAAAAAGAAgAAAAAAAAAAAAHAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAAJAAgAAAAAAAAAAAAKAAgAAAAAAAAAAAAKAAkAAAAAAAAAAAALAAkAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAkAAAAAAAAAAAAOAAkAAAAAAAAAAAAPAAkAAAAAAAAAAAAQAAkAAAAAAAAAAAAQAAgAAAAAAAAAAAARAAgAAAAAAAAAAAASAAgAAAAAAAAAAAATAAgAAAAAAAAAAAATAAkAAAAAAAAAAAAUAAkAAAAAAAAAAAAVAAkAAAAAAAAAAAAWAAkAAAAAAAAAAAAXAAkAAAAAAAAAAAAYAAkAAAAAAAAAAAAZAAkAAAAAAAAAAAAZAAgAAAAAAAAAAAAaAAgAAAAAAAAAAAAbAAgAAAAAAAAAAAAcAAgAAAAAAAAAAAAdAAgAAAAAAAAAAAAeAAgAAAAAAAAAAAAeAAkAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAADAAkAAAAAAAAAAAAEAAkAAAAAAAAAAAAFAAkAAAAAAAAAAAAJAAkAAAAAAAAAAAAKAAkAAAAAAAAAAAAGAAkAAAAAAAAAAAALAAkAAAAAAAAAAAAQAAkAAAAAAAAAAAAPAAkAAAAAAAAAAAARAAoAAAAAAAAAAAASAAsAAAAAAAAAAAAQAAoAAAAAAAAAAAARAAsAAAAAAAAAAAAQAAsAAAAAAAAAAAAVAAsAAAAAAAAAAAAWAAsAAAAAAAAAAAAWAAoAAAAAAAAAAAAXAAkAAAAAAAAAAAAXAAoAAAAAAAAAAAAXAAsAAAAAAAAAAAAYAAkAAAAAAAAAAAAZAAkAAAAAAAAAAAAaAAkAAAAAAAAAAAACAAkAAAAAAAAAAAACAAgAAAAAAAAAAAACAAcAAAAAAAAAAAACAAYAAAAAAAAAAAAbAAoAAAAAAAAAAAAcAAoAAAAAAAAAAAAdAAoAAAAAAAAAAAAeAAoAAAAAAAAAAAAeAAkAAAAAAAAAAAAfAAkAAAAAAAAAAAAaAAoAAAAAAAAAAAAiAAkAAAAAAAAAAAAjAAkAAAAAAAAAAAAjAAoAAAAAAAAAAAAkAAoAAAAAAAAAAAAlAAoAAAAAAAAAAAAlAAkAAAAAAAAAAAAmAAkAAAAAAAAAAAAmAAgAAAAAAAAAAAAnAAgAAAAAAAAAAAAnAAcAAAAAAAAAAAAoAAcAAAAAAAAAAAApAAcAAAAAAAAAAAAqAAcAAAAAAAAAAAAqAAgAAAAAAAAAAAAqAAkAAAAAAAAAAAAqAAoAAAAAAAAAAAArAAoAAAAAAAAAAAAsAAoAAAAAAAAAAAAtAAoAAAAAAAAAAAAuAAoAAAAAAAAAAAAtAAkAAAAAAAAAAAAsAAkAAAAAAAAAAAAtAAgAAAAAAAAAAAAxAAoAAAAAAAAAAAAxAAkAAAAAAAAAAAAyAAkAAAAAAAAAAAA1AAkAAAAAAAAAAAA1AAoAAAAAAAAAAAA2AAoAAAAAAAAAAAA4AAoAAAAAAAAAAAA3AAoAAAAAAAAAAAA5AAkAAAAAAAAAAAA6AAgAAAAAAAAAAAA5AAoAAAAAAAAAAAA6AAkAAAAAAAAAAAA7AAgAAAAAAAAAAAA+AAgAAAAAAAAAAAA/AAgAAAAAAAAAAAA/AAcAAAAAAAAAAABAAAcAAAAAAAAAAABCAAcAAAAAAAAAAABDAAcAAAAAAAAAAABBAAcAAAAAAAAAAABDAAgAAAAAAAAAAABEAAkAAAAAAAAAAABFAAoAAAAAAAAAAABEAAoAAAAAAAAAAABDAAkAAAAAAAAAAAAMAAkAAAAAAAAAAAAvAAoAAAAAAAAAAAAwAAoAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_pa8r4")
+
+[node name="coin" parent="." unique_id=1139732448 instance=ExtResource("6_fcfvj")]
+position = Vector2(1120, 616)
+
+[node name="coin2" parent="." unique_id=570922924 instance=ExtResource("6_fcfvj")]
+position = Vector2(1184, 680)

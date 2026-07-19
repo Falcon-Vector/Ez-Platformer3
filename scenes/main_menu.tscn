@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cpyqgsg7xp5t5" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://dnypcewk2dcut" path="res://assetz/buttons/play/play.png" id="2_wu84c"]
 [ext_resource type="Texture2D" uid="uid://docn6obla5hn5" path="res://assetz/buttons/exit/exit.png" id="3_8ln24"]
+[ext_resource type="FontFile" uid="uid://dp786jcq5b2ag" path="res://assetz/PressStart2P-Regular.ttf" id="4_wu84c"]
+[ext_resource type="AudioStream" uid="uid://6rom7wyka7n0" path="res://assetz/Sounds/1-28.-Beware-of-Forest-Mushrooms.ogg" id="5_8ln24"]
 
 [node name="main_menu" type="Node2D" unique_id=634032085]
 script = ExtResource("1_bqqt6")
@@ -36,6 +38,19 @@ offset_bottom = 536.0
 [node name="leave" type="Sprite2D" parent="button_manager/quit" unique_id=240053466]
 position = Vector2(112, 56)
 texture = ExtResource("3_8ln24")
+
+[node name="Label" type="Label" parent="." unique_id=1950187652]
+offset_left = 56.0
+offset_top = 336.0
+offset_right = 472.0
+offset_bottom = 361.59998
+scale = Vector2(2.5, 2.5)
+theme_override_fonts/font = ExtResource("4_wu84c")
+text = "COLLECT 10 COINS TO WIN!!!"
+
+[node name="background_main" type="AudioStreamPlayer" parent="." unique_id=1656562901]
+stream = ExtResource("5_8ln24")
+autoplay = true
 
 [connection signal="pressed" from="button_manager/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="button_manager/quit" to="." method="_on_quit_pressed"]

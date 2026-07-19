@@ -4,7 +4,9 @@ extends CharacterBody2D
 @onready var jumpsound: AudioStreamPlayer = $jumpsound
 @onready var deathsound: AudioStreamPlayer = $deathsound
 @onready var background: AudioStreamPlayer = $background
+@onready var coin_label = $Label
 
+var coin_counter = 0
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -56,3 +58,13 @@ func _physics_process(delta: float) -> void:
 func respawn():
 	deathsound.play()
 	position = start_position
+	
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("coin"):
+		set_coin(coin_counter + 1)
+		print(coin_counter)
+	
+func set_coin(new_coin_count: int) -> void:
+	coin_counter = new_coin_count
+	coin_label.text = "coins - " + str(coin_counter)
+	
