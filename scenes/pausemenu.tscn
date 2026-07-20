@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dxbyf5xnc73lu"]
+
+[ext_resource type="Script" uid="uid://djjw2tlqiw17w" path="res://scripts/pausemenu.gd" id="1_r33we"]
+[ext_resource type="FontFile" uid="uid://dp786jcq5b2ag" path="res://assetz/PressStart2P-Regular.ttf" id="2_8ljkb"]
+
+[node name="pausemenu" type="Control" unique_id=419103291]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_r33we")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1066805041]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.60784316)
+
+[node name="resume" type="Button" parent="." unique_id=1557406122]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 128.0
+offset_right = 768.0
+offset_bottom = 192.0
+theme_override_fonts/font = ExtResource("2_8ljkb")
+text = "Resume!"
+
+[node name="restart" type="Button" parent="." unique_id=1872386911]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 288.0
+offset_right = 768.0
+offset_bottom = 352.0
+theme_override_fonts/font = ExtResource("2_8ljkb")
+text = "Restart!"
+
+[node name="quit" type="Button" parent="." unique_id=186171025]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 448.0
+offset_right = 768.0
+offset_bottom = 512.0
+theme_override_fonts/font = ExtResource("2_8ljkb")
+text = "Quit..."
+
+[connection signal="pressed" from="resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

@@ -7,6 +7,7 @@
 size = Vector2(64, 40)
 
 [node name="spike" type="Area2D" unique_id=644990931]
+position = Vector2(600, 304)
 script = ExtResource("1_i4d64")
 metadata/_edit_group_ = true
 

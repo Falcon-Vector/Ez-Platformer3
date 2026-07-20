@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://fwqtco6amw0"]
 
 [ext_resource type="Script" uid="uid://b4s2arw4dysxm" path="res://scripts/endgame.gd" id="1_dugu8"]
+[ext_resource type="FontFile" uid="uid://dp786jcq5b2ag" path="res://assetz/PressStart2P-Regular.ttf" id="2_577wx"]
 
 [node name="endgame" type="Node2D" unique_id=46081645]
 script = ExtResource("1_dugu8")
@@ -10,6 +11,7 @@ offset_left = 448.0
 offset_top = 320.0
 offset_right = 704.0
 offset_bottom = 384.0
+theme_override_fonts/font = ExtResource("2_577wx")
 text = "replay...?"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
