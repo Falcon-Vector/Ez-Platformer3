@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var checkpoint_manager = get_tree().current_scene.get_node("checkpoint_manager")
 @onready var animation : AnimatedSprite2D = $AnimatedSprite2D
 @onready var jumpsound: AudioStreamPlayer = $jumpsound
 @onready var deathsound: AudioStreamPlayer = $deathsound
@@ -10,24 +11,20 @@ var coin_counter = 0
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-var start_position = Vector2(568,200)
 
 func _ready():
+	print("Checkpoint ready")
 	background.play()
 
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		jumpsound.play()
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
@@ -48,16 +45,13 @@ func _physics_process(delta: float) -> void:
 	else:
 		animation.play("jump")
 	
-	
-	
-	#handle respawn
 	if position.y > 900:
 		#respawn
 		respawn()
 		
 func respawn():
 	deathsound.play()
-	position = start_position
+	global_position = checkpoint_manager.last_location
 	
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("coin"):
