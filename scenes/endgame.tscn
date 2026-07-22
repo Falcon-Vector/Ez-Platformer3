@@ -14,4 +14,12 @@ offset_bottom = 384.0
 theme_override_fonts/font = ExtResource("2_577wx")
 text = "replay...?"
 
+[node name="Label" type="Label" parent="." unique_id=86473303]
+offset_left = 424.0
+offset_top = 192.0
+offset_right = 808.0
+offset_bottom = 257.0
+theme_override_fonts/font = ExtResource("2_577wx")
+text = "CONGRATS! YOU WON!!!"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

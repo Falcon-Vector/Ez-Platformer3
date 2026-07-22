@@ -6,7 +6,10 @@ extends CharacterBody2D
 @onready var deathsound: AudioStreamPlayer = $deathsound
 @onready var background: AudioStreamPlayer = $background
 @onready var coin_label = $Label
+@onready var timer_label = $timer_label
 
+var survival_time = 0.0
+var timer_running = true
 var coin_counter = 0
 
 const SPEED = 300.0
@@ -18,6 +21,15 @@ func _ready():
 
 
 func _physics_process(delta: float) -> void:
+	if timer_running:
+		survival_time += delta
+		
+		var minutes = int(survival_time) / 60
+		var seconds = int(survival_time) % 60
+		
+		timer_label.text = "%02d:%02d" % [minutes, seconds]
+	
+
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 

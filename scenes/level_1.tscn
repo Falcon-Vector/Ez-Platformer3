@@ -383,7 +383,7 @@ centered = false
 offset = Vector2(0, -124.39)
 
 [node name="player" parent="." unique_id=764091025 instance=ExtResource("1_5xbjy")]
-position = Vector2(360, 456)
+position = Vector2(384, 512)
 
 [node name="Label" type="Label" parent="player" unique_id=874171294]
 modulate = Color(0, 0, 0, 1)
@@ -396,6 +396,17 @@ theme_override_fonts/font = ExtResource("3_pa8r4")
 theme_override_font_sizes/font_size = 2
 text = "coins - 0"
 label_settings = SubResource("LabelSettings_fcfvj")
+
+[node name="timer_label" type="Label" parent="player" unique_id=1733618030]
+z_index = 100
+offset_left = -576.0
+offset_top = 256.0
+offset_right = -320.0
+offset_bottom = 282.6
+scale = Vector2(2.5, 2.5)
+theme_override_colors/font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_fonts/font = ExtResource("3_pa8r4")
+text = "survival time - "
 
 [node name="spike" parent="." unique_id=644990931 instance=ExtResource("3_4nkto")]
 position = Vector2(1376, 704)
@@ -533,9 +544,19 @@ position = Vector2(9376, 416)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=924544538]
 
 [node name="pausemenu" parent="CanvasLayer" unique_id=419103291 instance=ExtResource("8_15mv3")]
+offset_left = -256.0
+offset_top = -528.0
+offset_right = -256.0
+offset_bottom = -528.0
 
 [node name="checkpoint_manager" type="Node" parent="." unique_id=1208905658]
 script = ExtResource("9_2y5yt")
 
 [node name="checkpoint" parent="checkpoint_manager" unique_id=1860603757 instance=ExtResource("10_2os1m")]
-position = Vector2(1496, 584)
+position = Vector2(1504, 536)
+
+[node name="checkpoint3" parent="checkpoint_manager" unique_id=13872835 instance=ExtResource("10_2os1m")]
+position = Vector2(8608, 408)
+
+[node name="checkpoint2" parent="checkpoint_manager" unique_id=247404372 instance=ExtResource("10_2os1m")]
+position = Vector2(4896, 472)
