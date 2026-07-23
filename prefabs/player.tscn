@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://b4xvu1co6v2q1" path="res://assetz/Sounds/03.-Adventures-In-Grassland.ogg" id="6_g2jcq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bswci"]
-size = Vector2(64, 64)
+size = Vector2(48, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1txc5"]
 atlas = ExtResource("3_r66lb")
@@ -97,6 +97,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_r66lb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=422820201]
+position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_bswci")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1379756992]

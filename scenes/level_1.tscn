@@ -421,7 +421,7 @@ position = Vector2(2336, 640)
 position = Vector2(3552, 640)
 
 [node name="spike10" parent="." unique_id=1253413 instance=ExtResource("3_4nkto")]
-position = Vector2(11360, 944)
+position = Vector2(8048, 1656)
 
 [node name="spike33" parent="." unique_id=1957427025 instance=ExtResource("3_4nkto")]
 position = Vector2(160, 392)
@@ -463,7 +463,7 @@ position = Vector2(9824, 640)
 position = Vector2(9184, 192)
 
 [node name="spike20" parent="." unique_id=1934254117 instance=ExtResource("3_4nkto")]
-position = Vector2(8896, 488)
+position = Vector2(7880, 1432)
 
 [node name="spike19" parent="." unique_id=1784217301 instance=ExtResource("3_4nkto")]
 position = Vector2(8352, 512)
@@ -484,7 +484,7 @@ position = Vector2(6624, 640)
 position = Vector2(6304, 640)
 
 [node name="spike13" parent="." unique_id=1651033892 instance=ExtResource("3_4nkto")]
-position = Vector2(11536, 928)
+position = Vector2(8528, 1648)
 
 [node name="spike12" parent="." unique_id=624677540 instance=ExtResource("3_4nkto")]
 position = Vector2(2592, 448)
@@ -517,6 +517,9 @@ tile_set = SubResource("TileSet_pa8r4")
 [node name="coin" parent="." unique_id=1139732448 instance=ExtResource("6_fcfvj")]
 position = Vector2(1120, 616)
 
+[node name="coin10" parent="." unique_id=278041723 instance=ExtResource("6_fcfvj")]
+position = Vector2(13472, 296)
+
 [node name="coin9" parent="." unique_id=147046422 instance=ExtResource("6_fcfvj")]
 position = Vector2(4832, 496)
 
@@ -544,10 +547,6 @@ position = Vector2(9376, 416)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=924544538]
 
 [node name="pausemenu" parent="CanvasLayer" unique_id=419103291 instance=ExtResource("8_15mv3")]
-offset_left = -256.0
-offset_top = -528.0
-offset_right = -256.0
-offset_bottom = -528.0
 
 [node name="checkpoint_manager" type="Node" parent="." unique_id=1208905658]
 script = ExtResource("9_2y5yt")

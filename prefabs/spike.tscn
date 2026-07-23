@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dkvvjl3u5eeoe" path="res://assetz/spikes.png" id="2_i4d64"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xbjy"]
-size = Vector2(64, 40)
+size = Vector2(64, 32)
 
 [node name="spike" type="Area2D" unique_id=644990931]
 position = Vector2(600, 304)
@@ -16,7 +16,7 @@ position = Vector2(0, -32)
 texture = ExtResource("2_i4d64")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1666720681]
-position = Vector2(0, -20)
+position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_5xbjy")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
